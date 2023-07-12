@@ -1,6 +1,10 @@
-import { Header } from "../../components";
+import ReadStory from "./ReadStory";
 
 const Home = () => {
-  return <></>;
+  return (
+    <>
+      <ReadStory />
+    </>
+  );
 };
 export default Home;

@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <></>;
+  return <>tamta</>;
 };
 
 export default Footer;

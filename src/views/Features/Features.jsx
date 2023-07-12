@@ -1,4 +1,10 @@
+import PhotoSnapFeatures from "./PhotoSnapFeatures";
+
 const Features = () => {
-  return <></>;
+  return (
+    <>
+      <PhotoSnapFeatures />
+    </>
+  );
 };
 export default Features;
