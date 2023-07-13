@@ -1,7 +1,7 @@
 import storiesData from "../../data/stories.json";
 
-const ReadStory = () => {
-  const stories = storiesData.slice(0, 4);
+const ReadStories = () => {
+  const stories = storiesData;
 
   return (
     <div className="">
@@ -17,6 +17,9 @@ const ReadStory = () => {
           className="flex flex-col justify-center px-[33px] "
         >
           <div className="flex flex-col justify-center mt-[180px] ">
+            <span className="text-[13px] text-[white] font-sans font-normal leading-normal">
+              {story.date}
+            </span>
             <h3 className="text-[18px] text-[white] font-sans font-semibold leading-10">
               {story.title}
             </h3>
@@ -40,7 +43,7 @@ const ReadStory = () => {
     </div>
   );
 };
-export default ReadStory;
+export default ReadStories;
 
 //divs gavuwerot position center
 //gamoviyeneb desktop photos, display grid (destopze -4 tabletze-2 mobile 1)
