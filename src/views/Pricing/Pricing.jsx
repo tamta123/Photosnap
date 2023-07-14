@@ -1,5 +1,6 @@
 import { BetaCard } from "../../components";
 import PricingFeatures from "./PricingFeatures";
+import TypeCard from "./TypeCard";
 
 const Pricing = () => {
   return (
@@ -45,6 +46,7 @@ const Pricing = () => {
 
         <span>yearly</span>
       </div>
+      <TypeCard />
       <PricingFeatures />
       <BetaCard />
     </>

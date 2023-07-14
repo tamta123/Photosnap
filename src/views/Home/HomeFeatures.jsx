@@ -2,7 +2,6 @@ import featuresData from "../../data/features.json";
 
 const HomeFeatures = () => {
   const features = featuresData.slice(0, 3);
-  console.log(features);
 
   return (
     <div>

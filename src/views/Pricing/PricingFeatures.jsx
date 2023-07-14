@@ -7,7 +7,7 @@ const PricingFeatures = () => {
   return (
     <div className="px-[29px]">
       <h2>Features</h2>
-      <div></div>
+      <div className="w-full h-[1px] bg-black"></div>
       <div>
         {features?.map((feature, index) => (
           <div className="" key={index}>
