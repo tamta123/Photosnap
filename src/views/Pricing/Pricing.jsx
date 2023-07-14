@@ -1,4 +1,5 @@
 import { BetaCard } from "../../components";
+import PricingFeatures from "./PricingFeatures";
 
 const Pricing = () => {
   return (
@@ -44,6 +45,7 @@ const Pricing = () => {
 
         <span>yearly</span>
       </div>
+      <PricingFeatures />
       <BetaCard />
     </>
   );
