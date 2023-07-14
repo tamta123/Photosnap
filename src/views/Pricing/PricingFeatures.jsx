@@ -6,33 +6,43 @@ const PricingFeatures = () => {
 
   return (
     <div className="px-[29px]">
-      <h2>Features</h2>
-      <div className="w-full h-[1px] bg-black"></div>
+      <h2 className="text-black font-sans text-xs font-bold leading-normal tracking-[2px] mb-[14px] uppercase">
+        Features
+      </h2>
+      <div className="w-full h-[1px] bg-black my-[23px]"></div>
       <div>
         {features?.map((feature, index) => (
           <div className="" key={index}>
-            <h3>{feature.title}</h3>
-            <div className="flex gap-4 ">
+            <h3 className="text-black font-sans text-xs font-bold leading-normal tracking-[2px] mb-[14px]">
+              {feature.title}
+            </h3>
+            <div className="flex justify-between gap-4 ">
               <div>
-                <span>BASIC</span>
+                <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
+                  BASIC
+                </span>
                 <div>
                   {feature.basic ? <img src={tickImg} alt="Tick" /> : null}
                 </div>
               </div>
               <div>
-                <span>PRO</span>
+                <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
+                  PRO
+                </span>
                 <div>
                   {feature.pro ? <img src={tickImg} alt="Tick" /> : null}
                 </div>
               </div>
               <div>
-                <span>BUSINESS</span>
+                <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
+                  BUSINESS
+                </span>
                 <div>
                   {feature.business ? <img src={tickImg} alt="Tick" /> : null}
                 </div>
               </div>
             </div>
-            <div className="w-full h-[2px] bg-[#DFDFDF]"></div>
+            <div className="w-full h-[2px] bg-[#DFDFDF] my-6"></div>
           </div>
         ))}
       </div>

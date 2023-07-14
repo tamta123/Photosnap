@@ -1,8 +1,18 @@
 import { BetaCard } from "../../components";
 import PricingFeatures from "./PricingFeatures";
 import TypeCard from "./TypeCard";
+import PricingFeaturesData from "../../data/pricing.json";
+import { useState } from "react";
 
 const Pricing = () => {
+  const features = PricingFeaturesData;
+  const [isMonthly, setIsMonthly] = useState(true);
+  const handlePriceTypeToggle = () => {
+    setIsMonthly(!isMonthly);
+  };
+
+  console.log(isMonthly);
+
   return (
     <>
       <div className="">
@@ -26,7 +36,7 @@ const Pricing = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-3 h-[110px] w-full">
+      <div className="flex gap-3 justify-center items-center h-[110px] w-full">
         <span>monthly</span>
         <div>
           <label
@@ -38,7 +48,7 @@ const Pricing = () => {
               className="sr-only peer"
               type="checkbox"
               id="darkMode"
-              // onClick={toggleMode}
+              onChange={handlePriceTypeToggle}
             />
             <span className="w-2/5 h-4/5 bg-black absolute rounded-[10px] left-[2px] top-[2px] peer-checked:left-[22px] transition-all duration-500"></span>
           </label>
@@ -46,8 +56,14 @@ const Pricing = () => {
 
         <span>yearly</span>
       </div>
-      <TypeCard />
+      <div>
+        {features.map((feature, index) => (
+          <TypeCard feature={feature} key={index} isMonthly={isMonthly} />
+        ))}
+      </div>
+      <div className="w-full h-16"></div>
       <PricingFeatures />
+      <div className="w-full h-10"></div>
       <BetaCard />
     </>
   );
