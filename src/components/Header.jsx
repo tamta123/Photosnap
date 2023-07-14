@@ -4,7 +4,7 @@ const menuItems = [
   { name: "Home", link: "/" },
   { name: "Stories", link: "/stories" },
   { name: "Features", link: "/features" },
-  // { name: "Get an invite ", link: "/get-invited" },
+  { name: "Pricing ", link: "/pricing" },
 ];
 
 const Header = () => {

@@ -1,3 +1,4 @@
+import { BetaCard } from "../../components";
 import ReadStories from "./ReadStories";
 
 const Stories = () => {

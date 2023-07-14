@@ -6,8 +6,8 @@ const Footer = () => {
     { name: "Pricing ", link: "/pricing" },
   ];
   return (
-    <div className="flex flex-col items-center bg-black px-[60px] py-[56px]">
-      <div className="flex-shrink-0">
+    <div className="flex flex-col items-center bg-black px-[40px] py-[56px] justify-center">
+      <div className="pb-[32px]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="170"
@@ -43,14 +43,14 @@ const Footer = () => {
           </defs>
         </svg>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 pb-[49px]">
         <img src="../public/assets/shared/desktop/facebook.svg" />
         <img src="../public/assets/shared/desktop/youtube.svg" />
         <img src="../public/assets/shared/desktop/twitter.svg" />
         <img src="../public/assets/shared/desktop/pinterest.svg" />
         <img src="../public/assets/shared/desktop/instagram.svg" />
       </div>
-      <div className="ml-10 flex flex-col">
+      <div className="flex flex-col gap-4 pb-[110px]">
         {/* List items */}
         {menuItems.map((item, index) => (
           <a
@@ -70,7 +70,7 @@ const Footer = () => {
           </g>
         </svg>{" "}
       </div>
-      <span className="text-[#FFFFFF] opacity-[0.5025343894958496]">
+      <span className="text-[#FFFFFF] opacity-[0.5025343894958496] mt-[34px]">
         Copyright 2019. All Rights Reserved
       </span>
     </div>

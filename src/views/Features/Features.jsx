@@ -1,3 +1,4 @@
+import { BetaCard } from "../../components";
 import PhotoSnapFeatures from "./PhotoSnapFeatures";
 
 const Features = () => {
@@ -25,6 +26,7 @@ const Features = () => {
         </div>
       </div>
       <PhotoSnapFeatures />
+      <BetaCard />
     </>
   );
 };
