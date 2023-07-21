@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const menuItems = [
   { name: "Home", link: "/" },
@@ -9,13 +10,14 @@ const menuItems = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="bg-[#FFFFFF] fixed w-full top-0 z-10">
+    <nav className="bg-[#FFFFFF] fixed w-full top-0 z-10 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -104,18 +106,28 @@ const Header = () => {
         </div>
       </div>
       {/* Mobile Menu */}
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {menuItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              className="text-[#000000] block px-3 py-2 rounded-md text-base font-medium"
-            >
-              {item.name}
-            </a>
-          ))}
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } md:hidden mb-3 flex flex-col items-center`}
+      >
+        <div className="px-2 pt-2 space-y-1 sm:px-3">
+          {menuItems.map((item, index) =>
+            item.link !== location.pathname ? (
+              <a
+                key={index}
+                href={item.link}
+                className=" block pb-5 text-black text-center font-dm-sans text-[15px] font-bold leading-normal tracking-widest uppercase"
+              >
+                {item.name}
+              </a>
+            ) : null
+          )}
         </div>
+        <div className="w-[80%] h-[1px] bg-[#000000] opacity-25 mb-5"></div>
+        <button className="w-[80%] py-3 bg-black text-white text-center font-dm-sans text-base font-bold leading-normal tracking-widest m-auto ">
+          GET AN INVITE
+        </button>
       </div>
     </nav>
   );

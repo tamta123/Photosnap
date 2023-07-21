@@ -6,17 +6,17 @@ const PricingFeatures = () => {
 
   return (
     <div className="px-[29px]">
-      <h2 className="text-black font-sans text-xs font-bold leading-normal tracking-[2px] mb-[14px] uppercase">
+      <h2 className="text-black font-sans text-xs font-bold leading-normal tracking-[2px] mb-[14px] uppercase md:px-[24px] ">
         Features
       </h2>
-      <div className="w-full h-[1px] bg-black my-[23px]"></div>
+      <div className="w-full h-[1px] bg-black my-[23px] "></div>
       <div>
         {features?.map((feature, index) => (
           <div className="" key={index}>
-            <h3 className="text-black font-sans text-xs font-bold leading-normal tracking-[2px] mb-[14px]">
+            <h3 className="text-black font-sans text-xs font-bold leading-normal tracking-[2px] mb-[14px] md:px-[24px]">
               {feature.title}
             </h3>
-            <div className="flex justify-between gap-4 ">
+            <div className="flex justify-between md:items-center gap-4 md:px-[24px]">
               <div>
                 <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
                   BASIC

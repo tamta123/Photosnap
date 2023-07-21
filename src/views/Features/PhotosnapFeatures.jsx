@@ -4,10 +4,10 @@ const PhotoSnapFeatures = () => {
   const features = featuresData;
 
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2">
       {features?.map((feature, index) => (
         <div
-          className="px-[33px] pb-[56px] flex flex-col items-center"
+          className="px-[33px] pb-[56px] flex flex-col items-center md:justify-center"
           key={index}
         >
           <img className="mb-[48px]" src={feature.icon} />

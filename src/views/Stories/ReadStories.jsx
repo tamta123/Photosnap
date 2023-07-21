@@ -4,7 +4,7 @@ const ReadStories = () => {
   const stories = storiesData;
 
   return (
-    <div className="">
+    <div className="grid grid-cols-1 md:grid-cols-2 ">
       {stories.map((story, index) => (
         <div
           key={index}
@@ -12,11 +12,10 @@ const ReadStories = () => {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0)) , url(${story.backgroundImages})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "360px",
           }}
-          className="flex flex-col justify-center px-[33px] "
+          className="flex flex-col justify-center px-[33px] h-[360px] md:h-[499px]"
         >
-          <div className="flex flex-col justify-center mt-[180px] ">
+          <div className="flex flex-col justify-center mt-[180px]">
             <span className="text-[13px] text-[white] font-sans font-normal leading-normal">
               {story.date}
             </span>

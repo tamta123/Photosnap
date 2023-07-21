@@ -4,7 +4,7 @@ const ReadStory = () => {
   const stories = storiesData.slice(0, 4);
 
   return (
-    <div className="">
+    <div className="grid grid-cols-1 md:grid-cols-2">
       {stories.map((story, index) => (
         <div
           key={index}
@@ -12,9 +12,8 @@ const ReadStory = () => {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0)) , url(${story.backgroundImages})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "360px",
           }}
-          className="flex flex-col justify-center px-[33px] "
+          className="h-[360px] flex flex-col justify-center px-[33px] md:h-[500px] "
         >
           <div className="flex flex-col justify-center mt-[180px] ">
             <h3 className="text-[18px] text-[white] font-sans font-semibold leading-10">
