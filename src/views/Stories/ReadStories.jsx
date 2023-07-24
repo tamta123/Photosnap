@@ -4,7 +4,7 @@ const ReadStories = () => {
   const stories = storiesData;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  ">
       {stories.map((story, index) => (
         <div
           key={index}

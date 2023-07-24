@@ -6,9 +6,9 @@ const Footer = () => {
     { name: "Pricing ", link: "/pricing" },
   ];
   return (
-    <div className="flex flex-col items-center bg-black px-[40px] py-[56px] md:py-[64px] justify-center md:flex-row md:justify-between">
-      <div>
-        <div className="pb-[32px]">
+    <div className="flex flex-col items-center bg-black px-[40px] py-[56px] md:py-[64px] justify-center md:flex-row md:justify-between lg:justify-start lg:gap-[109px]">
+      <div className="lg:flex lg:flex-col lg:gap-[85px]">
+        <div className="pb-[32px] lg:p-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="170"
@@ -44,7 +44,7 @@ const Footer = () => {
             </defs>
           </svg>
         </div>
-        <div className="md:flex md:flex-col-reverse">
+        <div className="md:flex md:flex-col-reverse ">
           <div className="flex gap-3 pb-[49px] md:pb-0">
             <img src="../public/assets/shared/desktop/facebook.svg" />
             <img src="../public/assets/shared/desktop/youtube.svg" />
@@ -52,7 +52,7 @@ const Footer = () => {
             <img src="../public/assets/shared/desktop/pinterest.svg" />
             <img src="../public/assets/shared/desktop/instagram.svg" />
           </div>
-          <div className="flex flex-col gap-4 pb-[110px] md:flex-row md:pb-[76px] md:justify-start">
+          <div className="flex flex-col gap-4 pb-[110px] md:flex-row md:pb-[76px] md:justify-start lg:hidden">
             {/* List items */}
             {menuItems.map((item, index) => (
               <a
@@ -66,7 +66,20 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="md:flex md:flex-col md:h-[156px] md:justify-between">
+      <div className="hidden lg:flex flex-col gap-4 ">
+        {/* List items */}
+        {menuItems.map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            className="text-[#FFFFFF] px-3 py-2 rounded-md text-sm font-medium md:p-0"
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <div className="md:flex md:flex-col md:h-[156px] md:justify-between lg:ml-auto lg:items-end">
         <div className="flex gap-3 justify-center items-center">
           <span className="text-[#FFFFFF]">GET AN INVITE</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14">

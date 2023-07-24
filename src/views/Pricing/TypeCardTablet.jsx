@@ -8,19 +8,18 @@ const TypeCardTablet = ({ feature, isMonthly, index }) => {
           : "text-black bg-[#F5F5F5] pl-10 "
       }`}
     >
-      <div className="flex flex-row w-[50%] ">
-        <div
-          className="h-full w-[6px]"
-          style={{
-            display: index === 1 ? "block" : "none",
-            background:
-              index === 1
-                ? "linear-gradient(27deg, #FFC593 0%, #BC7198 51.95%, #5A77FF 100%)"
-                : "",
-          }}
-        ></div>
+      <div
+        className="h-full w-[6px]"
+        style={{
+          display: index === 1 ? "block" : "none",
+          background:
+            index === 1
+              ? "linear-gradient(27deg, #FFC593 0%, #BC7198 51.95%, #5A77FF 100%)"
+              : "",
+        }}
+      ></div>
+      <div className="flex flex-row w-[50%] lg:w-[30%] ">
         <div className="flex flex-col items-start gap-[18px] justify-start">
-          {/* <div className="h-full w-[6px]"></div> */}
           <h2
             className={`text-center font-dm-sans text-2xl font-bold leading-6 ${
               index === 1 ? "text-white " : "text-black"

@@ -2,8 +2,10 @@ import TypesData from "../../data/pricing.json";
 const TypeCard = ({ feature, isMonthly, index }) => {
   return (
     <div
-      className={`w-full h-auto pb-[40px] flex flex-col items-center gap-5 ${
-        index === 1 ? "text-white bg-[#000000]" : "text-black bg-[#F5F5F5]"
+      className={`w-full h-auto pb-[40px] flex flex-col items-center gap-5 lg:gap-8 ${
+        index === 1
+          ? "text-white bg-[#000000] lg:h-[470px]"
+          : "text-black bg-[#F5F5F5] lg:h-[407px]"
       }`}
     >
       <div
@@ -16,10 +18,12 @@ const TypeCard = ({ feature, isMonthly, index }) => {
               : "",
         }}
       ></div>
-      <div className="w-full h-[6px]"></div>
+      <div
+        className={`w-full h-[6px] ${index === 1 ? "hidden" : "block"}`}
+      ></div>
       <h2
-        className={`text-center font-dm-sans text-2xl font-bold leading-6 ${
-          index === 1 ? "text-white " : "text-black"
+        className={`text-center font-dm-sans text-2xl font-bold leading-10 ${
+          index === 1 ? "text-white lg:mt-6" : "text-black"
         }`}
       >
         {feature.title}

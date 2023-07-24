@@ -4,6 +4,7 @@ import TypeCard from "./TypeCard";
 import TypeCardTablet from "./TypeCardTablet";
 import PricingFeaturesData from "../../data/pricing.json";
 import { useState } from "react";
+import PricingFeaturesTablet from "./PricingFeaturesTablet";
 
 const Pricing = () => {
   const features = PricingFeaturesData;
@@ -15,7 +16,7 @@ const Pricing = () => {
   console.log(isMonthly);
 
   return (
-    <>
+    <div className="lg:flex lg:flex-col lg:items-center">
       <div className="md:h-[64px]"></div>
       <div className="">
         <div className="md:flex md:flex-row-reverse">
@@ -27,6 +28,11 @@ const Pricing = () => {
           <img
             className="md:block hidden"
             src="../../public/assets/pricing/tablet/hero.jpg"
+            alt=""
+          />
+          <img
+            className="lg:block hidden"
+            src="../../public/assets/pricing/desktop/hero.jpg"
             alt=""
           />
           <div className="flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] bg-[black] md:p-0 md:justify-center md:items-center">
@@ -72,7 +78,7 @@ const Pricing = () => {
 
         <span>Yearly</span>
       </div>
-      <div className="px-[22px] flex flex-col gap-6 md:hidden">
+      <div className="px-[22px] flex flex-col gap-6 md:hidden lg:flex lg:flex-row lg:px-[165px] lg:items-center">
         {features.map((feature, index) => (
           <TypeCard
             feature={feature}
@@ -82,7 +88,7 @@ const Pricing = () => {
           />
         ))}
       </div>
-      <div className=" md:flex md:flex-col md:gap-6 hidden md:mx-[40px]">
+      <div className=" md:flex md:flex-col md:gap-6 hidden md:mx-[40px] lg:hidden lg:px-[165px] ">
         {features.map((feature, index) => (
           <TypeCardTablet
             key={index}
@@ -93,10 +99,18 @@ const Pricing = () => {
         ))}
       </div>
       <div className="w-full h-16"></div>
-      <PricingFeatures />
+      <div className="hidden lg:block text-black text-center font-dm-sans text-4xl font-bold leading-48 tracking-wide uppercase pb-[56px]">
+        COMPARE
+      </div>
+      <div className="md:hidden">
+        <PricingFeatures />
+      </div>
+      <div className="hidden md:block lg:w-[50%] ">
+        <PricingFeaturesTablet />
+      </div>
       <div className="w-full h-10"></div>
       <BetaCard />
-    </>
+    </div>
   );
 };
 export default Pricing;

@@ -17,7 +17,7 @@ const PricingFeatures = () => {
               {feature.title}
             </h3>
             <div className="flex justify-between md:items-center gap-4 md:px-[24px]">
-              <div>
+              <div className="md:flex md:flex-col md:justify-center md:items-center">
                 <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
                   BASIC
                 </span>
@@ -25,7 +25,7 @@ const PricingFeatures = () => {
                   {feature.basic ? <img src={tickImg} alt="Tick" /> : null}
                 </div>
               </div>
-              <div>
+              <div className="md:flex md:flex-col md:justify-center md:items-center">
                 <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
                   PRO
                 </span>
@@ -33,7 +33,7 @@ const PricingFeatures = () => {
                   {feature.pro ? <img src={tickImg} alt="Tick" /> : null}
                 </div>
               </div>
-              <div>
+              <div className="md:flex md:flex-col md:justify-center md:items-center">
                 <span className="text-black opacity-50 font-sans text-[10px] font-bold leading-normal tracking-[1.667px]">
                   BUSINESS
                 </span>

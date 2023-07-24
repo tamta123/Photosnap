@@ -6,13 +6,19 @@ const Card = () => {
     <div className="">
       {homecard?.map((card, index) => (
         <div
-          className={`md:flex ${
+          className={`md:flex  ${
             index !== 1 ? "md:flex-row-reverse" : "md:flex"
           } md:h-[650px]`}
           key={index}
         >
           <img className="md:hidden" src={card.photo.mobile} alt="" />
-          <img className="md:block hidden" src={card.photo.tablet} alt="" />
+          <img
+            className="md:block hidden lg:hidden"
+            src={card.photo.tablet}
+            alt=""
+          />
+          <img className="lg:block hidden" src={card.photo.desktop} alt="" />
+
           <div
             className={`flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] md:justify-center md:px-0 md:py-0 ${
               index !== 0 ? "md:pl-[54px]" : "md:pl-0"

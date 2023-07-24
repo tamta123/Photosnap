@@ -9,13 +9,15 @@ const Stories = () => {
         <img
           className="md:hidden"
           src="../../public/assets/stories/mobile/moon-of-appalacia.jpg"
-          alt=""
+          alt="moon of appalacia"
         />
         <div
-          className="flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] bg-[black]  "
+          className="flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] bg-[black]   "
           style={{
             backgroundImage:
-              "url(../../public/assets/stories/tablet/moon-of-appalacia.jpg)",
+              "url(../../public/assets/stories/desktop/moon-of-appalacia.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div
