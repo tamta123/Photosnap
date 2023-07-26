@@ -12,12 +12,12 @@ const Features = () => {
         <img className="md:hidden " src="/features/mobile/hero.jpg" alt="" />
         <img
           className="md:block hidden lg:hidden "
-          src="/features/tablet/hero.jpg"
+          src="/assets/features/tablet/hero.jpg"
           alt=""
         />
         <img
           className="lg:block hidden w-[100%] h-auto "
-          src="/features/desktop/hero.jpg"
+          src="/assets/features/desktop/hero.jpg"
           alt=""
         />
 
