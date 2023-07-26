@@ -2,7 +2,7 @@ const BetaCard = () => {
   return (
     <div
       style={{
-        backgroundImage: "url(../../public/assets/shared/desktop/bg-beta.jpg)",
+        backgroundImage: "url(/assets/shared/desktop/bg-beta.jpg)",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

@@ -9,19 +9,15 @@ const Features = () => {
         className="mb-[64px] md:flex md:flex-row-reverse lg:grid lg:grid-cols-[1.3fr,1fr] lg:w-auto"
         style={{ direction: "rtl" }}
       >
-        <img
-          className="md:hidden "
-          src="../../public/assets/features/mobile/hero.jpg"
-          alt=""
-        />
+        <img className="md:hidden " src="/features/mobile/hero.jpg" alt="" />
         <img
           className="md:block hidden lg:hidden "
-          src="../../public/assets/features/tablet/hero.jpg"
+          src="/features/tablet/hero.jpg"
           alt=""
         />
         <img
           className="lg:block hidden w-[100%] h-auto "
-          src="../../public/assets/features/desktop/hero.jpg"
+          src="/features/desktop/hero.jpg"
           alt=""
         />
 
