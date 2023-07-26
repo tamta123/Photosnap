@@ -46,11 +46,11 @@ const Footer = () => {
         </div>
         <div className="md:flex md:flex-col-reverse ">
           <div className="flex gap-3 pb-[49px] md:pb-0">
-            <img src="../public/assets/shared/desktop/facebook.svg" />
-            <img src="../public/assets/shared/desktop/youtube.svg" />
-            <img src="../public/assets/shared/desktop/twitter.svg" />
-            <img src="../public/assets/shared/desktop/pinterest.svg" />
-            <img src="../public/assets/shared/desktop/instagram.svg" />
+            <img src="/assets/shared/desktop/facebook.svg" />
+            <img src="/assets/shared/desktop/youtube.svg" />
+            <img src="/assets/shared/desktop/twitter.svg" />
+            <img src="/assets/shared/desktop/pinterest.svg" />
+            <img src="/assets/shared/desktop/instagram.svg" />
           </div>
           <div className="flex flex-col gap-4 pb-[110px] md:flex-row md:pb-[76px] md:justify-start lg:hidden">
             {/* List items */}
