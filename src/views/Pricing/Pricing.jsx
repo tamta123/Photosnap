@@ -25,17 +25,17 @@ const Pricing = () => {
         >
           <img
             className="md:hidden"
-            src="../../public/assets/pricing/mobile/hero.jpg"
+            src="/assets/pricing/mobile/hero.jpg"
             alt=""
           />
           <img
             className="md:block lg:hidden hidden"
-            src="../../public/assets/pricing/tablet/hero.jpg"
+            src="/assets/pricing/tablet/hero.jpg"
             alt=""
           />
           <img
             className="lg:block hidden w-[100%] h-auto"
-            src="../../public/assets/pricing/desktop/hero.jpg"
+            src="/assets/pricing/desktop/hero.jpg"
             alt=""
           />
           <div className="flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] bg-[black] md:p-0 md:justify-center md:items-center">
