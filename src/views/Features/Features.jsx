@@ -5,24 +5,27 @@ const Features = () => {
   return (
     <>
       <div className="md:h-[64px]"></div>
-      <div className="mb-[64px] md:flex md:flex-row-reverse">
+      <div
+        className="mb-[64px] md:flex md:flex-row-reverse lg:grid lg:grid-cols-[1.3fr,1fr] lg:w-auto"
+        style={{ direction: "rtl" }}
+      >
         <img
           className="md:hidden "
           src="../../public/assets/features/mobile/hero.jpg"
           alt=""
         />
         <img
-          className="md:block hidden "
+          className="md:block hidden lg:hidden "
           src="../../public/assets/features/tablet/hero.jpg"
           alt=""
         />
         <img
-          className="lg:block hidden "
+          className="lg:block hidden w-[100%] h-auto "
           src="../../public/assets/features/desktop/hero.jpg"
           alt=""
         />
 
-        <div className="lg:w-[40%] flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] bg-[black] md:justify-around md:flex-row md:px-0 md:gap-[54px] md:items-center md:pb-0">
+        <div className="flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] bg-[black] md:justify-around  lg:justify-start md:flex-row md:px-0 md:gap-[54px] md:items-center md:pb-0 lg:w-auto">
           <div
             className="w-[128px] h-[6px] mb-[48px] md:w-[6px] md:h-[144px]"
             style={{

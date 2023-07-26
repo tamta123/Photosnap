@@ -6,21 +6,34 @@ const Card = () => {
     <div className="">
       {homecard?.map((card, index) => (
         <div
-          className={`md:flex  ${
-            index !== 1 ? "md:flex-row-reverse" : "md:flex"
+          className={`md:flex lg:grid  lg:h-auto ${
+            index !== 1
+              ? "md:flex-row-reverse lg:grid-cols-[1fr,1.3fr]"
+              : "md:flex lg:grid-cols-[1.3fr,1fr]"
           } md:h-[650px]`}
           key={index}
+          style={{ direction: index !== 1 ? "rtl" : "initial" }}
         >
-          <img className="md:hidden" src={card.photo.mobile} alt="" />
-          <img
-            className="md:block hidden lg:hidden"
-            src={card.photo.tablet}
-            alt=""
-          />
-          <img className="lg:block hidden" src={card.photo.desktop} alt="" />
+          <div className="flex justify-center items-center">
+            <img
+              className="md:hidden object-cover"
+              src={card.photo.mobile}
+              alt=""
+            />
+            <img
+              className="hidden md:block lg:hidden object-cover"
+              src={card.photo.tablet}
+              alt=""
+            />
+            <img
+              className="hidden lg:block object-cover w-[100%] h-auto"
+              src={card.photo.desktop}
+              alt=""
+            />
+          </div>
 
           <div
-            className={`flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] md:justify-center md:px-0 md:py-0 ${
+            className={`flex flex-col gap-4 pb-[74px] pl-[33px] pr-[24px] md:justify-center md:px-0 md:py-0  ${
               index !== 0 ? "md:pl-[54px]" : "md:pl-0"
             } `}
             style={{

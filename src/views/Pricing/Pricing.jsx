@@ -19,19 +19,22 @@ const Pricing = () => {
     <div className="lg:flex lg:flex-col lg:items-center">
       <div className="md:h-[64px]"></div>
       <div className="">
-        <div className="md:flex md:flex-row-reverse">
+        <div
+          className="md:flex md:flex-row-reverse lg:grid lg:grid-cols-[1.3fr,1fr] lg:w-auto"
+          style={{ direction: "rtl" }}
+        >
           <img
             className="md:hidden"
             src="../../public/assets/pricing/mobile/hero.jpg"
             alt=""
           />
           <img
-            className="md:block hidden"
+            className="md:block lg:hidden hidden"
             src="../../public/assets/pricing/tablet/hero.jpg"
             alt=""
           />
           <img
-            className="lg:block hidden"
+            className="lg:block hidden w-[100%] h-auto"
             src="../../public/assets/pricing/desktop/hero.jpg"
             alt=""
           />
