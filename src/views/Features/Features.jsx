@@ -1,5 +1,5 @@
 import { BetaCard } from "../../components";
-import PhotoSnapFeatures from "./PhotoSnapFeatures";
+import PhotoSnapFeatures from "./PhotosnapFeatures";
 
 const Features = () => {
   return (
